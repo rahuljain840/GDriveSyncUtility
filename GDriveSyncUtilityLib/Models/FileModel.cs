@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace GDriveSyncUtility.Models
+namespace GDriveSyncUtilityLib.Models
 {
     public class FileModel
     {
@@ -14,5 +14,9 @@ namespace GDriveSyncUtility.Models
         public DateTime? CreatedAt { get; set; }
 
         public Boolean IsNew { get; set; }
+
+        public Boolean Updated { get; set; }
+
+        public Boolean Deleted { get; set; }
     }
 }

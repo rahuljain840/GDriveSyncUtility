@@ -1,13 +1,21 @@
-﻿using GDriveSyncUtility.Helpers;
-using GDriveSyncUtility.Models;
+﻿using GDriveSyncUtilityLib.GDriveApi;
+using GDriveSyncUtilityLib.Helpers;
+using GDriveSyncUtilityLib.Manager;
+using GDriveSyncUtilityLib.Models;
 using System.Collections.Generic;
 using System.Web.Http;
 
 namespace GDriveSyncUtility.Controllers
 {
-    public class FilesController : ApiController
+    public class FileController : ApiController
     {
+        private readonly IDBManager _dbManager;
 
+        public FileController(IDBManager dbManager)
+        {
+            _dbManager = dbManager;
+        }
+        
         // GET: api/Files
         public IEnumerable<string> Get()
         {
@@ -19,7 +27,9 @@ namespace GDriveSyncUtility.Controllers
         {
             var service = AuthenticationHelper.GetDriveService();
 
-            return FilesHelper.GetFilesInFolder(service, id);
+            var gdriveFiles = FileAPI.GetFilesInFolder(service, id);
+
+            return FileHelper.GetFiles(_dbManager, gdriveFiles);
         }
 
         // POST: api/Files

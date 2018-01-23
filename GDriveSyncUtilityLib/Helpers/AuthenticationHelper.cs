@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 
-namespace GDriveSyncUtility.Helpers
+namespace GDriveSyncUtilityLib.Helpers
 {
     public class AuthenticationHelper
     {
