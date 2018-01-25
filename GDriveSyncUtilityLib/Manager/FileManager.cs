@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GDriveSyncUtilityLib.Manager
 {
-    public class DBManager : IDBManager
+    class FileManager : IDBManager
     {
         public List<FileModel> GetAllFiles()
         {

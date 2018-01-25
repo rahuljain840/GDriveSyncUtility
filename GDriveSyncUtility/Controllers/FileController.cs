@@ -15,7 +15,7 @@ namespace GDriveSyncUtility.Controllers
         {
             _dbManager = dbManager;
         }
-        
+
         // GET: api/Files
         public IEnumerable<string> Get()
         {
@@ -35,6 +35,16 @@ namespace GDriveSyncUtility.Controllers
         // POST: api/Files
         public void Post([FromBody]string value)
         {
+
+        }
+
+        // POST: api/Files
+        public void Post([FromBody]List<FileModel> files)
+        {
+            foreach (var file in files)
+            {
+                _dbManager.SaveFile(file);
+            }
         }
 
         // PUT: api/Files/5

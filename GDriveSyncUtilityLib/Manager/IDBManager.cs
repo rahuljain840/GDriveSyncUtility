@@ -11,5 +11,6 @@ namespace GDriveSyncUtilityLib.Manager
     {
         List<FileModel> GetAllFiles();
         FileModel GetFileByID(int id);
+        Boolean SaveFile(FileModel file);
     }
 }

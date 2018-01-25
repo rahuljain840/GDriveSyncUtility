@@ -74,6 +74,7 @@
     <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\FolderHelper.cs" />
     <Compile Include="Manager\DBManager.cs" />
+    <Compile Include="Manager\FileManager.cs" />
     <Compile Include="Manager\IDBManager.cs" />
     <Compile Include="Models\FileModel.cs" />
     <Compile Include="Models\FolderModel.cs" />
