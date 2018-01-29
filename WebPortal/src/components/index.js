@@ -6,7 +6,6 @@ import '../css/module1.css';
 import App from './App.js';
 import TileList from './tileList.js';
 import Home from './home.js';
-import Search from './search.js';
 
 render(
 

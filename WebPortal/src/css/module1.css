@@ -1,12 +1,8 @@
 body{
-    background: lightgray;
-    //background: green;
+    background: white;
 }
 .headingTitle{
     text-align: center;
-}
-.search{
-    margin: 0 auto;
 }
 ul {
     list-style-type: none;
@@ -47,13 +43,8 @@ li a:hover {
     height: 220px;
 }
 .imgTitle{
-    color: #fff;
+    color: #000;
     font-weight: 500;
-}
-.search.form-control{
-    //margin: 10px 0 0 20px;
-    width: 20%;
-    margin: 0 auto;
 }
 
 .parentBox{
@@ -67,13 +58,7 @@ li a:hover {
     top: 7.5%;
     left: 58%;
 }
-.searchOk{
-    display: block;
-    /*margin-top:5px;*/
-    /*margin-left: 20px;*/
-    margin-left: 61%;
-    margin-top: -32px;
-}
+
 .title.form-control{
     width:20%;
 }
@@ -152,5 +137,4 @@ li a:hover {
     float:left;/*fix for  buggy browsers*/
     display:table-column;
     width:200px;
-    background-color:#ccc;
 }
