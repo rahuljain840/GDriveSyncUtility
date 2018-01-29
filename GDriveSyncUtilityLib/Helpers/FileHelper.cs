@@ -1,8 +1,10 @@
 ﻿using GDriveSyncUtilityLib.Manager;
 using GDriveSyncUtilityLib.Models;
 using Google.Apis.Drive.v3;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -10,6 +12,8 @@ namespace GDriveSyncUtilityLib.Helpers
 {
     public class FileHelper
     {
+        public static string filePath = "C:\\file.json";
+
         /// <summary>
         /// Get files belonging to a folder.
         /// </summary>
@@ -37,6 +41,19 @@ namespace GDriveSyncUtilityLib.Helpers
             }
 
             return files;
+        }
+
+        public static string LoadJson()
+        {
+            using (StreamReader r = new StreamReader(filePath))
+            {
+                return r.ReadToEnd();
+            }
+        }
+
+        public static void WriteJson(string jsonData)
+        {
+            File.WriteAllText(filePath, jsonData);            
         }
     }
 }

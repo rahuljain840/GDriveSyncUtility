@@ -34,7 +34,7 @@ namespace GDriveSyncUtility.DependencyResolution
                     scan.WithDefaultConventions();
                 });
 
-            For<IDBManager>().Use<DBManager>();
+            For<IDBManager>().Use<FileManager>();
         }
 
         #endregion
